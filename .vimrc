@@ -7,24 +7,22 @@ set number
 call plug#begin('~/.vim/plugged')
 
   Plug 'dense-analysis/ale'
-  Plug 'el1t/statusline'
+"  Plug 'el1t/statusline'
   Plug 'preservim/nerdtree'
   Plug 'godlygeek/tabular'
   Plug 'bling/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'altercation/vim-colors-solarized'
+"  Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
 " }}}
 
 set encoding=utf-8
-
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
-
+let g:airline_theme='minimalist'
 " History
 set history=50
 
@@ -69,14 +67,13 @@ set expandtab
 set mouse=
 
 " Colorscheme
-if &t_Co == 255
-    try
-        color xoria256
-    catch /^Vim\%((\a\+)\)\=:E185/
-        " Oh well
-    endtry
-endif
 
+colorscheme jellybeans
 set noesckeys
 
 set nocompatible
+
+
+
+"hide vim default status
+set noshowmode
